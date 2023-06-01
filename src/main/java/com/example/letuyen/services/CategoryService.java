@@ -21,12 +21,12 @@ public class CategoryService {
             throw new RuntimeException("Category not found");
         }
     }
-    public void Addcategory(Category cate){
-        categoryRepository.save(cate);
+
+    public Category saveCategory(Category category){ return categoryRepository.save(category);}
+    public void deleteCategory(Long id) { categoryRepository.deleteById(id);}
+    public void addCategory(Category category){
+        categoryRepository.save(category);
     }
-    public void updatecate(Category cate){
-        categoryRepository.save(cate);
+    public void updateCategory(Category category){categoryRepository.save(category);
     }
-    public Category saveCategory(Category category){return categoryRepository.save(category);}
-    public void deleteCategory(Long id){categoryRepository.deleteById(id);}
 }
